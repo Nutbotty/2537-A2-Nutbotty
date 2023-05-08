@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar fixed" style="background-color: #712f3e;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html" style="color: #e1dbd1;">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" style="color: #e1dbd1;">
+                <span class="navbar-toggler-icon" style="background-color: #712f3e;color: #e1dbd1;"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="background-color: #712f3e;color: #e1dbd1;">
+                <div class="offcanvas-header" style="background-color: #712f3e;color: #e1dbd1;">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #e1dbd1;"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: #e1dbd1;">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="/" type="submit" class="btn btn-primary mt-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/members" type="submit" class="btn btn-primary mt-3">Members Area</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin" type="submit" class="btn btn-primary mt-3">Admin Access</a>
+                        </li>
+                        <li class="nav-item login_out">
+                            <form method="post" action="/signout">
+                                <button type="submit" class="btn btn-danger mt-3">Sign Out</button>
+                            </form>
+                        </li>
+                </div>
+            </div>
+    </nav>

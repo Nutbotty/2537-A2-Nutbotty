@@ -1,0 +1,18 @@
+<%- include("templates/header") %>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h1>Sign In</h1>
+                <form method='post' action='/signin'>
+                    <label for='username'>Username:</label>
+                    <input type='text' id='username' name='username' required><br><br>
+                    <label for='password'>Password:</label>
+                    <input type='password' id='password' name='password' required><br><br>
+                    <input type='submit' value='Sign In' class="btn btn-primary">
+                </form>
+                <br>
+                <a href="/" class="btn btn-secondary">Home</a>
+            </div>
+        </div>
+    </div>
+    <%- include("templates/footer") %>

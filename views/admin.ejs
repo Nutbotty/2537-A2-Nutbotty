@@ -1,0 +1,37 @@
+<%- include("templates/header") %>
+    <h1>Admin Page</h1>
+    <table class="table table-hover" ?>
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Promote</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <% user_array.forEach(user=> { %>
+            <tr scope="row">
+                <td>
+                    <%= user.username %>
+                </td>
+                <td>
+                    <%= user.admin %>
+                </td>
+                <td>
+                    <form method="post" action="/promote">
+                        <input type="hidden" name="username" value="<%= user.username %>">
+                        <button type="submit" class="btn"
+                            style="background-color: #712f3e;color: #e1dbd1;">Promote</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post" action="/remove">
+                        <input type="hidden" name="username" value="<%= user.username %>">
+                        <button type="submit" class="btn"
+                            style="background-color: #712f3e;color: #e1dbd1;">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <%- include("templates/footer") %>
